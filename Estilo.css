@@ -1,0 +1,35 @@
+#lig
+{
+    width: 450px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    border: 1px solid green;
+}
+#lig:hover{
+    cursor: pointer;
+    background-color: darkgreen;
+}
+
+#des{
+    width: 450px;
+    height: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+    border: 1px solid red;
+}
+#des:hover{
+    cursor: pointer;
+    background-color: red;
+}
+#forma{
+    width: 2000px;
+    height: 100px;
+    border: 2px 2px 2px 10px;
+}
+#but{
+    
+}
+
+
+
