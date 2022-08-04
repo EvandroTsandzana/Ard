@@ -12,10 +12,38 @@
         <table  align="center" border="1">
             <caption>Lampada</caption >
             <tr id="forma" >
-                <td id="but" align="center"><button id="lig">Ligar</button>
-                    <button id="des">Desligar</button>
+                <td id="but" align="center" ><button id="lig" onclick="ligar()">Ligar</button>
+                    <button id="des" onclick="Desligar()">Desligar</button>
                 </td>
             </tr>
         </table>
     </body>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+    <script>
+        
+        const firebaseConfig = {
+  apiKey: "AIzaSyCCs-UMBA5m4OFBeU4Vdovs4lURuGQm5OM",
+  authDomain: "arduino2022-e4327.firebaseapp.com",
+  projectId: "arduino2022-e4327",
+  storageBucket: "arduino2022-e4327.appspot.com",
+  messagingSenderId: "257113567397",
+  appId: "1:257113567397:web:93e8f0c3253a9d15909d4c",
+  measurementId: "G-V2CRCCVHZC"
+}
+
+         firebase.initializeApp(firebaseConfig)
+        
+        function Desligar(){
+            //alert("Firebase Desligar")
+            firebase.database().ref('SALA').set({estado: 'DESLIGADA'})
+        }
+
+        function ligar(){
+            //alert("Firebase Ligar")
+            firebase.database().ref('SALA').set({estado: 'LIGADA'})
+        }
+   
+    </script>
+
 </html>
